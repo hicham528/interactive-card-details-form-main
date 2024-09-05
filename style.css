@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+:root {
+  --Linear_gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light_grayish_violet: hsl(270, 3%, 87%);
+  --Dark_grayish_violet: hsl(279, 6%, 55%);
+  --Very_dark_violet: hsl(278, 68%, 11%);
+}
+body {
+    height: 100vh;
+    width: 100%;
+  }
+  
+.container{
+    display: flex;
+    gap: 50PX;
+  
+   height: 100%;
+   width: 100%;
+}
+.result_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    height: 100vh;
+    width: 500px;
+    background: url(images/bg-main-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--White);
+}
+.front_card{
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+  padding: 20px; 
+    background: url(images/bg-card-front.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 60px;
+}
+.front_card img{
+    height: 50px;
+    width: 80px;
+   
+}
+.front_card h1{
+    font-size: 18px;
+    position: absolute;
+    left: 20%;
+    top: 60%;
+}
+.info-details{
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    text-transform: capitalize;
+}
+.back_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/bg-card-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+    left: 160px;
+}
+.back_cart h1{
+    text-align: right;
+    width: 90%;
+}
+.enter_info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    margin-left: 200px;
+}
+.name_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10PX;
+}
+.name_container h3{
+    text-transform: capitalize;
+    color: var(--Very_dark_violet);
+}
+.name_container input{
+    height: 30px;
+    width: 300px;
+    border: 2px solid var(--Very_dark_violet);
+    padding-left: 30PX;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.errors{
+    color: var(--Red);
+    font-size: 12px;
+    font-weight: 600;
+}
+.date_cvc_container{
+    display: flex;
+    gap: 20PX;
+    margin-top: 20px;
+}
+.date_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10PX;
+}
+.date_container h3{
+    text-transform: capitalize;
+    color: var(--Very_dark_violet);
+}
+.input_date{
+    display: flex;
+    gap: 10PX;
+}
+.input_date input{
+    width: 80px;
+    height: 40px;
+    border: 2px solid var(--Very_dark_violet);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.cvc_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10PX;
+}
+.cvc_container h3{
+    color: var(--Very_dark_violet);
+}
+.cvc_container input{
+    height: 40px;
+    width: 200px;
+    border: 2px solid var(--Very_dark_violet);
+    padding-left: 30PX;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button {
+    height: 40px;
+    width: 400px;
+    border: none;
+    background-color: var(--Very_dark_violet);
+    color: var(--White);
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--White);
+    color: var(--Very_dark_violet);
+    border: 1px solid var(--Very_dark_violet);
+    box-shadow: 0px 5px 10px var(--Very_dark_violet);
+}
+.rigth_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_result_container{
+    margin-left: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20PX;
+}
+.new_result_container h1{
+    color: var(--Very_dark_violet);
+    font-weight: 200;
+}
+
+
+
+/*==================media screen for mobile phones============*/
+@media only screen and (max-width: 600px){
+    .container{
+        display: flex;
+        gap: 60PX;
+      flex-direction: column;
+       height: 100%;
+       width: 400px;
+       margin-top: 180px;
+       justify-content: center;
+    }
+    .result_container{
+        display: flex;
+        flex-direction: column;
+        gap: 20PX;
+        height: 100vh;
+        width: 400px;
+        background: url(images/bg-main-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+       
+        color: var(--White);
+    }
+    .front_card{
+        display: flex;
+        flex-direction: column;
+        gap: 20PX;
+      padding: 20px; 
+        background: url(images/bg-card-front.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 400px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .back_cart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/bg-card-back.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 400px;
+        height: 250px;
+        border-radius: 10px;
+      margin-right: 100px;
+    }
+    .date_cvc_container{
+        display: flex;
+        gap: 20PX;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .new_result_container{
+        margin-left: 200px;
+        display:none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20PX;
+        
+    }
+    .rigth_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+    .enter_info_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        margin-left: 200px;
+    }
+}
